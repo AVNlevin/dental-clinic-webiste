@@ -1,0 +1,22 @@
+{
+  "name": "auradental-studio-backend",
+  "version": "1.0.0",
+  "description": "Lightweight Node.js backend for AuraDental Studio clinic bookings",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "dental",
+    "clinic",
+    "backend",
+    "express"
+  ],
+  "author": "AuraDental Studio",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

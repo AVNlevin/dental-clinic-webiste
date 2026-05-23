@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraDental Studio | Premium Modern Dentistry</title>
+    <!-- Meta Descriptions for SEO -->
+    <meta name="description" content="Welcome to AuraDental Studio. Experience premium, state-of-the-art dental wellness tailored for you. Interactive booking, specialized cosmetic care, and implants.">
+    <meta name="keywords" content="dental clinic, dentist, cosmetic dentistry, orthodontics, teeth whitening, invisalign, dental implants">
+    <meta name="author" content="AuraDental Studio">
+    
+    <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for additional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-theme">
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo" id="header-logo">
+                <span class="logo-icon"><i class="fa-solid fa-tooth"></i></span>
+                <span class="logo-text">Aura<span>Dental</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#symptom-checker" class="nav-link">Symptom Checker</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#slider-section" class="nav-link">Results</a>
+                <a href="#booking" class="nav-link">Book Now</a>
+                <a href="#team" class="nav-link">Our Experts</a>
+                <a href="#faqs" class="nav-link">FAQs</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle light/dark theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="#booking" class="btn btn-primary nav-cta">Book Appointment</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open mobile menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="badge-new">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">Now Accepting New Patients</span>
+                    </div>
+                    <h1 class="hero-title">Redefining Modern Dentistry with <span class="text-gradient">Artistry & Tech</span></h1>
+                    <p class="hero-description">Experience premium dental wellness tailored uniquely for you. From advanced cosmetics to precise restorations, we build smiles that inspire confidence.</p>
+                    <div class="hero-actions">
+                        <a href="#booking" class="btn btn-primary btn-large">Schedule Visit</a>
+                        <a href="#symptom-checker" class="btn btn-secondary btn-large">Symptom Checker</a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">15k+</span>
+                            <span class="stat-label">Smiles Perfected</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">99.8%</span>
+                            <span class="stat-label">Satisfaction Rate</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Years Excellence</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <img src="assets/hero_clinic.png" alt="AuraDental Studio Interior" class="hero-img">
+                        <!-- Floating Glassmorphic Info Cards -->
+                        <div class="floating-card card-top-left float-animation">
+                            <div class="card-icon"><i class="fa-solid fa-circle-check"></i></div>
+                            <div class="card-text">
+                                <h4>Advanced Tech</h4>
+                                <p>3D Digital Imaging</p>
+                            </div>
+                        </div>
+                        <div class="floating-card card-bottom-right float-animation" style="animation-delay: -2s;">
+                            <div class="card-icon warning"><i class="fa-solid fa-star"></i></div>
+                            <div class="card-text">
+                                <h4>Top Rated Clinic</h4>
+                                <p>5.0 Google Rating</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dental Symptom Checker (Interactive Quiz) -->
+        <section class="symptom-checker" id="symptom-checker">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Interactive Diagnostic Tool</span>
+                    <h2 class="section-title">Dental Symptom Checker</h2>
+                    <p class="section-subtitle">Unsure what care you need? Complete our quick 3-step assessment to receive dynamic treatment recommendations.</p>
+                </div>
+                
+                <div class="quiz-container glass-card">
+                    <!-- Progress Bar -->
+                    <div class="quiz-progress-bar">
+                        <div class="progress-fill" id="quiz-progress"></div>
+                        <div class="progress-steps">
+                            <div class="progress-step active" data-step="1">1</div>
+                            <div class="progress-step" data-step="2">2</div>
+                            <div class="progress-step" data-step="3">3</div>
+                        </div>
+                    </div>
+
+                    <!-- Step 1: Main Concern -->
+                    <div class="quiz-step active" id="quiz-step-1">
+                        <h3 class="quiz-question">What is your primary concern today?</h3>
+                        <div class="quiz-options-grid">
+                            <button class="quiz-option" data-value="pain">
+                                <span class="option-icon"><i class="fa-solid fa-hand-holding-droplet"></i></span>
+                                <span class="option-title">Pain & Discomfort</span>
+                                <span class="option-desc">Toothaches, sensitivity, or sore gums</span>
+                            </button>
+                            <button class="quiz-option" data-value="aesthetics">
+                                <span class="option-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                                <span class="option-title">Smile Aesthetics</span>
+                                <span class="option-desc">Whitening, straightening, or veneers</span>
+                            </button>
+                            <button class="quiz-option" data-value="checkup">
+                                <span class="option-icon"><i class="fa-solid fa-calendar-check"></i></span>
+                                <span class="option-title">Routine Checkup</span>
+                                <span class="option-desc">Cleaning, exam, or general maintenance</span>
+                            </button>
+                            <button class="quiz-option" data-value="broken">
+                                <span class="option-icon"><i class="fa-solid fa-tooth"></i></span>
+                                <span class="option-title">Missing/Broken Tooth</span>
+                                <span class="option-desc">Chips, cracks, gaps, or loose crowns</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Specific Details (Dynamic Content Loaded via JS) -->
+                    <div class="quiz-step" id="quiz-step-2">
+                        <h3 class="quiz-question" id="quiz-q2-title">Tell us a bit more details...</h3>
+                        <div class="quiz-options-grid" id="quiz-q2-options">
+                            <!-- Dynamic Content -->
+                        </div>
+                        <div class="quiz-actions">
+                            <button class="btn btn-secondary" id="quiz-prev-btn"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Result & Recommendation -->
+                    <div class="quiz-step" id="quiz-step-3">
+                        <div class="result-container">
+                            <div class="result-header">
+                                <span class="result-badge"><i class="fa-solid fa-circle-info"></i> Assessment Results</span>
+                                <h3 class="result-title" id="quiz-result-title">Dental Cleaning & Exam</h3>
+                            </div>
+                            
+                            <div class="result-body">
+                                <div class="result-illustration">
+                                    <i class="fa-solid fa-notes-medical" id="result-icon"></i>
+                                </div>
+                                <div class="result-info">
+                                    <p class="result-description" id="quiz-result-desc">Based on your answers, we recommend scheduling a dental checkup and clean. Routine visits prevent issues before they begin.</p>
+                                    <div class="result-specs">
+                                        <div class="spec-item">
+                                            <span class="spec-label">Est. Duration</span>
+                                            <span class="spec-val" id="quiz-result-duration">45 - 60 Mins</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <span class="spec-label">Specialist</span>
+                                            <span class="spec-val" id="quiz-result-specialist">General Hygienist</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-actions result-actions">
+                                <button class="btn btn-secondary" id="quiz-reset-btn"><i class="fa-solid fa-rotate-left"></i> Start Over</button>
+                                <button class="btn btn-primary" id="quiz-book-result-btn">Book Recommended Treatment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Clinical Offerings</span>
+                    <h2 class="section-title">Specialized Dental Services</h2>
+                    <p class="section-subtitle">We merge medical excellence with cosmetic precision to deliver unmatched dental outcomes.</p>
+                </div>
+                
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card glass-card hover-reveal-card" data-service-id="cosmetic">
+                        <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h3 class="service-title">Cosmetic Dentistry</h3>
+                        <p class="service-short-desc">Perfect your smile line with advanced composite bonding, custom porcelain veneers, and whitening.</p>
+                        <div class="service-details">
+                            <ul>
+                                <li>Custom Porcelain Veneers</li>
+                                <li>Professional Laser Whitening</li>
+                                <li>Inlays & Onlays</li>
+                            </ul>
+                        </div>
+                        <a href="#booking" class="service-link">Learn More & Book <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <!-- Service 2 -->
+                    <div class="service-card glass-card hover-reveal-card" data-service-id="orthodontics">
+                        <div class="service-icon"><i class="fa-solid fa-mask-face"></i><i class="fa-solid fa-align-center"></i></div>
+                        <h3 class="service-title">Invisalign & Ortho</h3>
+                        <p class="service-short-desc">Straighten your teeth comfortably with clear aligner technology tailored specifically to your smile profile.</p>
+                        <div class="service-details">
+                            <ul>
+                                <li>Invisalign® Clear Aligners</li>
+                                <li>Custom Retainers</li>
+                                <li>Adult & Pediatric Alignment</li>
+                            </ul>
+                        </div>
+                        <a href="#booking" class="service-link">Learn More & Book <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <!-- Service 3 -->
+                    <div class="service-card glass-card hover-reveal-card" data-service-id="implants">
+                        <div class="service-icon"><i class="fa-solid fa-screwdriver"></i></div>
+                        <h3 class="service-title">Dental Implants</h3>
+                        <p class="service-short-desc">Restore your smile's structure and strength with biocompatible titanium implants that look and feel natural.</p>
+                        <div class="service-details">
+                            <ul>
+                                <li>Single-Tooth Implants</li>
+                                <li>All-on-4® Reconstruction</li>
+                                <li>Custom Ceramic Crowns</li>
+                            </ul>
+                        </div>
+                        <a href="#booking" class="service-link">Learn More & Book <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <!-- Service 4 -->
+                    <div class="service-card glass-card hover-reveal-card" data-service-id="preventive">
+                        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3 class="service-title">Preventive Care</h3>
+                        <p class="service-short-desc">Preserve your long-term oral health with thorough cleaning, early cavity detection, and deep gum therapies.</p>
+                        <div class="service-details">
+                            <ul>
+                                <li>Detailed Cleaning & Polish</li>
+                                <li>Digital X-Ray Diagnostics</li>
+                                <li>Periodontal Care</li>
+                            </ul>
+                        </div>
+                        <a href="#booking" class="service-link">Learn More & Book <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Before/After Slider Section -->
+        <section class="slider-section" id="slider-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Patient Transformations</span>
+                    <h2 class="section-title">Behold the Transformation</h2>
+                    <p class="section-subtitle">Slide to compare real patient transformations before and after receiving our specialized veneers and whitening.</p>
+                </div>
+                
+                <div class="slider-wrapper glass-card">
+                    <!-- Before/After Image Compare Container -->
+                    <div class="image-compare" id="image-compare">
+                        <!-- Before (Underneath) -->
+                        <div class="img-container img-before">
+                            <div class="image-label label-before">Before Treatment</div>
+                            <svg viewBox="0 0 800 500" class="teeth-illustration teeth-before">
+                                <rect width="100%" height="100%" fill="#e2e8f0"/>
+                                <g transform="translate(100, 100)">
+                                    <!-- Dental Arch outline before - stained/dark -->
+                                    <path d="M 100 300 Q 100 100 300 100 T 500 300" fill="none" stroke="#94a3b8" stroke-width="20" stroke-linecap="round"/>
+                                    <!-- Teeth with yellowish tints & gaps -->
+                                    <rect x="180" y="110" width="40" height="70" rx="10" fill="#fef08a" stroke="#ca8a04" stroke-width="4"/>
+                                    <rect x="225" y="95" width="45" height="85" rx="10" fill="#fef08a" stroke="#ca8a04" stroke-width="4"/>
+                                    <rect x="275" y="90" width="50" height="90" rx="10" fill="#fde047" stroke="#ca8a04" stroke-width="4"/>
+                                    <rect x="330" y="90" width="50" height="90" rx="10" fill="#fde047" stroke="#ca8a04" stroke-width="4"/>
+                                    <rect x="385" y="95" width="45" height="85" rx="10" fill="#fef08a" stroke="#ca8a04" stroke-width="4"/>
+                                    <rect x="435" y="110" width="40" height="70" rx="10" fill="#fef08a" stroke="#ca8a04" stroke-width="4"/>
+                                    <!-- Gums - before (darker pink) -->
+                                    <path d="M 160 130 C 200 110, 240 100, 300 100 C 360 100, 400 110, 440 130" fill="none" stroke="#f43f5e" stroke-width="24" stroke-linecap="round" opacity="0.8"/>
+                                </g>
+                                <text x="400" y="420" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="24" font-weight="700" fill="#475569">Severe Discoloration & Alignment Issues</text>
+                            </svg>
+                        </div>
+                        
+                        <!-- After (On Top, Resizable) -->
+                        <div class="img-container img-after" id="img-after-overlay">
+                            <div class="image-label label-after">After Treatment</div>
+                            <svg viewBox="0 0 800 500" class="teeth-illustration teeth-after">
+                                <rect width="100%" height="100%" fill="#f0fdfa"/>
+                                <g transform="translate(100, 100)">
+                                    <!-- Dental Arch outline after - bright & clean -->
+                                    <path d="M 100 300 Q 100 100 300 100 T 500 300" fill="none" stroke="#ccfbf1" stroke-width="20" stroke-linecap="round"/>
+                                    <!-- Teeth - perfectly aligned & white -->
+                                    <rect x="180" y="115" width="42" height="75" rx="12" fill="#ffffff" stroke="#2dd4bf" stroke-width="4"/>
+                                    <rect x="227" y="100" width="46" height="90" rx="12" fill="#ffffff" stroke="#2dd4bf" stroke-width="4"/>
+                                    <rect x="278" y="95" width="50" height="95" rx="12" fill="#ffffff" stroke="#2dd4bf" stroke-width="4"/>
+                                    <rect x="333" y="95" width="50" height="95" rx="12" fill="#ffffff" stroke="#2dd4bf" stroke-width="4"/>
+                                    <rect x="388" y="100" width="46" height="90" rx="12" fill="#ffffff" stroke="#2dd4bf" stroke-width="4"/>
+                                    <rect x="439" y="115" width="42" height="75" rx="12" fill="#ffffff" stroke="#2dd4bf" stroke-width="4"/>
+                                    <!-- Gums - after (healthy rose) -->
+                                    <path d="M 160 130 C 200 110, 240 100, 300 100 C 360 100, 400 110, 440 130" fill="none" stroke="#fda4af" stroke-width="24" stroke-linecap="round" opacity="0.8"/>
+                                </g>
+                                <text x="400" y="420" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="24" font-weight="700" fill="#0d9488">Perfect Alignment & Professional Bleaching</text>
+                            </svg>
+                        </div>
+                        
+                        <!-- Resizable handle -->
+                        <input type="range" min="0" max="100" value="50" class="slider" id="compare-slider" aria-label="Compare before and after teeth whitening slider">
+                        <div class="slider-line" id="slider-line">
+                            <div class="slider-button"><i class="fa-solid fa-arrows-left-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Visual Scheduler Section -->
+        <section class="booking" id="booking">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Direct Scheduling</span>
+                    <h2 class="section-title">Schedule Your Visit Online</h2>
+                    <p class="section-subtitle">Select a specialist, choose a convenient date and time, and secure your visit instantly.</p>
+                </div>
+                
+                <div class="booking-grid glass-card">
+                    <!-- Progress Trackers -->
+                    <div class="booking-steps-sidebar">
+                        <div class="step-link active" data-booking-step="1">
+                            <div class="step-num">1</div>
+                            <div class="step-info">
+                                <h5>Choose Expert</h5>
+                                <p>Select your dentist</p>
+                            </div>
+                        </div>
+                        <div class="step-link" data-booking-step="2">
+                            <div class="step-num">2</div>
+                            <div class="step-info">
+                                <h5>Select Calendar</h5>
+                                <p>Date & time slot</p>
+                            </div>
+                        </div>
+                        <div class="step-link" data-booking-step="3">
+                            <div class="step-num">3</div>
+                            <div class="step-info">
+                                <h5>Your Information</h5>
+                                <p>Contact & confirmation</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Booking Form Container -->
+                    <form class="booking-form" id="booking-form" novalidate>
+                        <!-- Form Step 1: Select Dentist -->
+                        <div class="form-step active" id="form-step-1">
+                            <h3 class="form-step-title">Select Dental Specialist</h3>
+                            <div class="dentist-selection">
+                                <div class="dentist-card active" data-dentist-id="dr-mercer">
+                                    <div class="dentist-image-wrapper">
+                                        <img src="assets/dentist_female.png" alt="Dr. Sarah Mercer" class="dentist-avatar">
+                                    </div>
+                                    <div class="dentist-info">
+                                        <span class="dentist-spec">Cosmetic & Orthodontist</span>
+                                        <h4>Dr. Sarah Mercer</h4>
+                                        <p class="dentist-quote">"Creating confident, beautiful smiles brings me absolute joy."</p>
+                                        <div class="dentist-rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>(240+ Reviews)</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dentist-card" data-dentist-id="dr-vance">
+                                    <div class="dentist-image-wrapper">
+                                        <img src="assets/dentist_male.png" alt="Dr. Marcus Vance" class="dentist-avatar">
+                                    </div>
+                                    <div class="dentist-info">
+                                        <span class="dentist-spec">Restorative & Implants Specialist</span>
+                                        <h4>Dr. Marcus Vance</h4>
+                                        <p class="dentist-quote">"Utilizing modern surgical tech to restore functional oral health."</p>
+                                        <div class="dentist-rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i>
+                                            <span>(190+ Reviews)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-actions text-right">
+                                <button type="button" class="btn btn-primary" id="btn-next-1">Choose Specialist & Continue <i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Form Step 2: Date & Time Picker -->
+                        <div class="form-step" id="form-step-2">
+                            <h3 class="form-step-title">Select Date & Time</h3>
+                            <div class="scheduler-picker">
+                                <!-- Calendar -->
+                                <div class="calendar-container">
+                                    <div class="calendar-header">
+                                        <button type="button" class="cal-nav-btn" id="prev-month-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                                        <h4 class="current-month" id="calendar-month-year">May 2026</h4>
+                                        <button type="button" class="cal-nav-btn" id="next-month-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                                    </div>
+                                    <div class="calendar-weekdays">
+                                        <div>Su</div><div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div>
+                                    </div>
+                                    <div class="calendar-days-grid" id="calendar-days-grid">
+                                        <!-- Days dynamically rendered by JS -->
+                                    </div>
+                                </div>
+
+                                <!-- Time slots -->
+                                <div class="time-slots-container">
+                                    <h4>Available Slots <span id="selected-date-display">(Select a Date)</span></h4>
+                                    <div class="time-slots-grid" id="time-slots-grid">
+                                        <!-- Slots dynamically populated -->
+                                        <div class="empty-state-slots">Please select an available date on the calendar first.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary" id="btn-prev-2"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                                <button type="button" class="btn btn-primary" id="btn-next-2" disabled>Confirm Time Slot <i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Form Step 3: Information & Submission -->
+                        <div class="form-step" id="form-step-3">
+                            <h3 class="form-step-title">Patient Demographics</h3>
+                            <div class="booking-summary-banner">
+                                <div class="summary-details">
+                                    <p><strong>Dentist:</strong> <span id="summary-dentist">Dr. Sarah Mercer</span></p>
+                                    <p><strong>Appointment:</strong> <span id="summary-datetime">Monday, May 25, 2026 at 09:30 AM</span></p>
+                                </div>
+                            </div>
+                            
+                            <div class="patient-form-grid">
+                                <div class="input-group">
+                                    <label for="patient-name">Full Name <span class="required">*</span></label>
+                                    <input type="text" id="patient-name" name="patient-name" placeholder="John Doe" required>
+                                    <span class="error-message">Name is required.</span>
+                                </div>
+                                <div class="input-group">
+                                    <label for="patient-email">Email Address <span class="required">*</span></label>
+                                    <input type="email" id="patient-email" name="patient-email" placeholder="john@example.com" required>
+                                    <span class="error-message">Enter a valid email.</span>
+                                </div>
+                                <div class="input-group">
+                                    <label for="patient-phone">Phone Number <span class="required">*</span></label>
+                                    <input type="tel" id="patient-phone" name="patient-phone" placeholder="(555) 000-0000" required>
+                                    <span class="error-message">Enter a valid phone number.</span>
+                                </div>
+                                <div class="input-group">
+                                    <label for="treatment-select">Reason for Visit</label>
+                                    <select id="treatment-select" name="treatment-select">
+                                        <option value="general-checkup">General Clean & Checkup</option>
+                                        <option value="cosmetic">Cosmetic Assessment (Veneers/Whitening)</option>
+                                        <option value="orthodontics">Orthodontics/Invisalign</option>
+                                        <option value="implant-consult">Implant Consultation</option>
+                                        <option value="emergency">Emergency Relief</option>
+                                    </select>
+                                </div>
+                                <div class="input-group full-width">
+                                    <label for="patient-notes">Additional Patient Notes</label>
+                                    <textarea id="patient-notes" name="patient-notes" rows="3" placeholder="Please list any dental fears, symptoms, or insurance questions..."></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary" id="btn-prev-3"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                                <button type="submit" class="btn btn-primary" id="btn-submit-booking"><i class="fa-solid fa-circle-check"></i> Book Appointment Instantly</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Success Modal Overlay -->
+        <div class="modal-overlay" id="success-modal">
+            <div class="modal-card glass-card">
+                <div class="success-icon-animation">
+                    <div class="circle-border"></div>
+                    <div class="checkmark-icon"><i class="fa-solid fa-check"></i></div>
+                </div>
+                <h3 class="modal-title">Booking Confirmed!</h3>
+                <p class="modal-description">Thank you. Your appointment with <strong id="modal-dentist-name">Dr. Sarah Mercer</strong> is locked in for:</p>
+                <div class="modal-appointment-box">
+                    <p id="modal-appointment-time"><i class="fa-solid fa-calendar-day"></i> Monday, May 25, 2026 at 09:30 AM</p>
+                </div>
+                <p class="modal-footer-msg">A calendar invite and preparation guide have been dispatched to your email address.</p>
+                <button type="button" class="btn btn-primary" id="close-modal-btn">Return Home</button>
+            </div>
+        </div>
+
+        <!-- Testimonials Carousel -->
+        <section class="testimonials" id="testimonials">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Patient Satisfaction</span>
+                    <h2 class="section-title">What Our Patients Say</h2>
+                    <p class="section-subtitle">Real experiences shared by patients who achieved their dream smiles at AuraDental.</p>
+                </div>
+                
+                <div class="testimonials-slider-container">
+                    <div class="testimonials-track" id="testimonials-track">
+                        <!-- Slide 1 -->
+                        <div class="testimonial-slide active">
+                            <div class="testimonial-rating">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"Dr. Mercer and the team completely altered how I feel about dentistry. The clinic looks like a luxury spa and the Invisalign process was incredibly smooth. My confidence is through the roof!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"><i class="fa-solid fa-user"></i></div>
+                                <div class="author-info">
+                                    <h5>Elizabeth Bennett</h5>
+                                    <p>Invisalign Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-rating">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"I needed three implants after a sports injury. Dr. Vance was incredibly detailed in explaining the 3D-guided surgery. Absolutely zero pain during the procedure, and the results look perfectly natural."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"><i class="fa-solid fa-user"></i></div>
+                                <div class="author-info">
+                                    <h5>Michael Vance</h5>
+                                    <p>Dental Implants Patient</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-rating">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">"The Symptom Checker recommended veneers for my chipped tooth. I booked instantly and they shaped a custom porcelain veneer in just two visits. Highly recommend AuraDental!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"><i class="fa-solid fa-user"></i></div>
+                                <div class="author-info">
+                                    <h5>Sophia Reynolds</h5>
+                                    <p>Veneers Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carousel Indicators -->
+                    <div class="carousel-indicators">
+                        <button class="indicator active" data-slide="0" aria-label="Go to slide 1"></button>
+                        <button class="indicator" data-slide="1" aria-label="Go to slide 2"></button>
+                        <button class="indicator" data-slide="2" aria-label="Go to slide 3"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Team Section -->
+        <section class="team" id="team">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Clinical Leadership</span>
+                    <h2 class="section-title">Meet Our Specialists</h2>
+                    <p class="section-subtitle">Board-certified doctors integrating custom care with state-of-the-art dental methods.</p>
+                </div>
+                
+                <div class="team-grid">
+                    <!-- Specialist 1 -->
+                    <div class="team-card glass-card">
+                        <div class="team-image-container">
+                            <img src="assets/dentist_female.png" alt="Dr. Sarah Mercer" class="team-image">
+                            <div class="team-social">
+                                <a href="#" aria-label="Sarah Mercer LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#" aria-label="Sarah Mercer Twitter"><i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-body">
+                            <span class="team-role">Lead Cosmetic Dentist & Invisalign Provider</span>
+                            <h3 class="team-name">Dr. Sarah Mercer, DDS</h3>
+                            <p class="team-bio">Graduated with high honors from Columbia University. Specializing in aesthetic restorations, digital smile design, and clear aligner therapies with over 8 years of clinical practice.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Specialist 2 -->
+                    <div class="team-card glass-card">
+                        <div class="team-image-container">
+                            <img src="assets/dentist_male.png" alt="Dr. Marcus Vance" class="team-image">
+                            <div class="team-social">
+                                <a href="#" aria-label="Marcus Vance LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#" aria-label="Marcus Vance Twitter"><i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-body">
+                            <span class="team-role">Oral Surgeon & Implantology Chief</span>
+                            <h3 class="team-name">Dr. Marcus Vance, DMD</h3>
+                            <p class="team-bio">DMD from Penn Dental Medicine, followed by residency in Maxillofacial Surgery. Focuses on computer-guided implant placement, bone grafting, and comprehensive full-mouth recovery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive FAQs Accordion -->
+        <section class="faqs" id="faqs">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Patient Knowledge Base</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Find answers to general questions about treatments, scheduling, insurance, and procedures.</p>
+                </div>
+                
+                <div class="faq-accordion-list">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item glass-card">
+                        <button class="faq-question-btn" aria-expanded="false">
+                            <span>How does the Online Symptom Checker work?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq-answer-wrapper">
+                            <div class="faq-answer">
+                                <p>Our symptom checker uses clinical decision trees to suggest potential treatments based on your symptoms or smile goals. It is designed to guide your appointment booking and should not replace a professional evaluation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 2 -->
+                    <div class="faq-item glass-card">
+                        <button class="faq-question-btn" aria-expanded="false">
+                            <span>Do you accept commercial dental insurance?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq-answer-wrapper">
+                            <div class="faq-answer">
+                                <p>Yes, we accept major commercial dental insurance providers. Our financial coordinator can do a complimentary insurance verification prior to your visit to estimate your out-of-pocket costs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 3 -->
+                    <div class="faq-item glass-card">
+                        <button class="faq-question-btn" aria-expanded="false">
+                            <span>Is Invisalign as effective as traditional braces?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq-answer-wrapper">
+                            <div class="faq-answer">
+                                <p>For the majority of mild-to-moderate orthodontic issues, Invisalign is highly effective, virtually invisible, and removable. Dr. Mercer will evaluate your digital scans to determine if you are an ideal candidate.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="faq-item glass-card">
+                        <button class="faq-question-btn" aria-expanded="false">
+                            <span>What is your cancellation policy?</span>
+                            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq-answer-wrapper">
+                            <div class="faq-answer">
+                                <p>We request at least 24 hours' notice for cancellations or modifications. This allows us to offer the appointment slot to other patients in need of dental care.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer & Contact Section -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-container">
+                <!-- Branding column -->
+                <div class="footer-col footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon"><i class="fa-solid fa-tooth"></i></span>
+                        <span class="logo-text">Aura<span>Dental</span></span>
+                    </a>
+                    <p class="footer-tagline">Modern dentistry in a luxury environment. We focus on patient comfort, advanced diagnostics, and breathtaking smile makeovers.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Yelp"><i class="fa-brands fa-yelp"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Contact info column -->
+                <div class="footer-col footer-contact">
+                    <h4>Get In Touch</h4>
+                    <ul class="contact-details-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>100 Plaza Parkway, Suite 500, Medical District</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>(555) 890-0400</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>care@auradentalstudio.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Hours Column with dynamic open badge -->
+                <div class="footer-col footer-hours">
+                    <h4>Clinical Hours</h4>
+                    <div class="hours-badge-container">
+                        <span class="status-badge" id="clinic-status-badge">
+                            <span class="status-dot"></span>
+                            <span class="status-text">Loading Status...</span>
+                        </span>
+                    </div>
+                    <ul class="hours-list">
+                        <li><span>Mon - Thu:</span> <span>8:00 AM - 6:00 PM</span></li>
+                        <li><span>Friday:</span> <span>8:00 AM - 4:00 PM</span></li>
+                        <li><span>Sat - Sun:</span> <span class="text-muted">Closed (Emergency Only)</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 AuraDental Studio. All rights reserved. Designed for visual excellence.</p>
+                <div class="footer-links">
+                    <a href="#" id="staff-portal-link"><i class="fa-solid fa-lock"></i> Staff Portal</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin Dashboard Modal -->
+    <div class="modal-overlay" id="admin-modal">
+        <div class="modal-card glass-card admin-modal-card">
+            <div class="admin-modal-header">
+                <div class="admin-title-area">
+                    <h3><i class="fa-solid fa-gauge-high"></i> AuraDental Booking Portal</h3>
+                    <p>Internal clinic appointment records (Stored Locally)</p>
+                </div>
+                <button type="button" class="close-admin-btn" id="close-admin-btn" aria-label="Close Staff Portal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <!-- Dashboard Stats Panels -->
+            <div class="admin-stats-row">
+                <div class="admin-stat-card">
+                    <span class="stat-icon"><i class="fa-solid fa-users"></i></span>
+                    <div class="stat-info">
+                        <h4 id="admin-total-bookings">0</h4>
+                        <p>Total Bookings</p>
+                    </div>
+                </div>
+                <div class="admin-stat-card">
+                    <span class="stat-icon"><i class="fa-solid fa-user-doctor"></i></span>
+                    <div class="stat-info">
+                        <h4 id="admin-dr-mercer-count">0</h4>
+                        <p>Dr. Mercer Appointments</p>
+                    </div>
+                </div>
+                <div class="admin-stat-card">
+                    <span class="stat-icon"><i class="fa-solid fa-user-doctor"></i></span>
+                    <div class="stat-info">
+                        <h4 id="admin-dr-vance-count">0</h4>
+                        <p>Dr. Vance Appointments</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls row -->
+            <div class="admin-controls-row">
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="admin-search-input" placeholder="Search patient name, email, phone...">
+                </div>
+                <div class="admin-actions-btns">
+                    <button class="btn btn-secondary" id="admin-export-btn"><i class="fa-solid fa-file-csv"></i> Export to CSV</button>
+                    <button class="btn btn-danger" id="admin-clear-btn"><i class="fa-solid fa-trash-can"></i> Clear Records</button>
+                </div>
+            </div>
+
+            <!-- Records table wrapper -->
+            <div class="admin-table-wrapper">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Appointment Date/Time</th>
+                            <th>Patient Name</th>
+                            <th>Contact Info</th>
+                            <th>Dentist Assigned</th>
+                            <th>Reason for Visit</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-bookings-list">
+                        <!-- Bookings rendered here -->
+                        <tr>
+                            <td colspan="6" class="no-records-msg">No appointments booked yet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
